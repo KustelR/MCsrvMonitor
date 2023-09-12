@@ -12,5 +12,8 @@
   "eslintConfig": {},
   "dependencies": {
     "package-lock-only": "^0.0.4"
+  },
+  "scripts": {
+    "test": "test.js"
   }
 }

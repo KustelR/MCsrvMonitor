@@ -36,6 +36,9 @@
     <Content Include="src\index.js" />
     <Content Include="src\mcapirequester.js" />
     <Content Include="src\writer.js" />
+    <Content Include="test.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="TODO.txt" />
   </ItemGroup>
   <ItemGroup>
