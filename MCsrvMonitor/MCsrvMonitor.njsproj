@@ -33,6 +33,7 @@
     <Content Include="package-lock.json" />
     <Content Include="package.json" />
     <Content Include="README.md" />
+    <Content Include="src\.eslintrc.json" />
     <Content Include="src\index.js" />
     <Content Include="src\mcapirequester.js" />
     <Content Include="src\writer.js" />
