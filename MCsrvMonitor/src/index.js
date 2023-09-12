@@ -18,10 +18,10 @@ async function getOnline() {
 }
 
 
-async function writeOnline(online) {
+async function writeOnline(online, ip) {
     if (max_online < online) {
         max_online = online;
-        await writer.writeNewReport(online);
+        await writer.writeNewReport(online, ip);
     }
 }
 
@@ -36,7 +36,7 @@ async function WriteDownOnline() {
     let online;
     try {
         await getOnline().then(data => { online = data });
-        await writeOnline(online);
+        await writeOnline(online, ip);
     }
     catch (err) {
         console.error(err)

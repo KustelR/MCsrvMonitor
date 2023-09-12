@@ -34,6 +34,9 @@
     <Content Include="package.json" />
     <Content Include="README.md" />
     <Content Include="src\.eslintrc.json" />
+    <Content Include="src\getJsonScript.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="src\index.js" />
     <Content Include="src\mcapirequester.js" />
     <Content Include="src\writer.js" />
