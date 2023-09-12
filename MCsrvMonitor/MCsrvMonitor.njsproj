@@ -39,7 +39,7 @@
     </Content>
     <Content Include="src\index.js" />
     <Content Include="src\mcapirequester.js" />
-    <Content Include="src\writedownonline.js">
+    <Content Include="src\onlinechecker.js">
       <SubType>Code</SubType>
     </Content>
     <Content Include="src\writer.js" />

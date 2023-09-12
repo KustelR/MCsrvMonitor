@@ -1,6 +1,5 @@
-config = require('../config.json');
-
-writeDown = require('./writedownonline')
+const onlinechecker = require('./onlinechecker');
+const config = require('../config.json');
 
 ip = config.ip;
 port = config.port;
@@ -14,8 +13,8 @@ const epoch = d.getTime();
 let milisecondsSinceLastTimerTrigger = epoch % delay;
 let milisecondsUntilNextTimerTrigger = delay - milisecondsSinceLastTimerTrigger;
 
-writeDown.OnlineCheck(ip, port);
+onlinechecker.LogOnline(ip, port);
 setTimeout(function () {
-    setInterval(writeDown.OnlineCheck, delay);
-    writeDown.OnlineCheck(ip, port);
+    setInterval(onlinechecker.LogOnline, delay);
+    onlinechecker.LogOnline(ip, port);
 }, milisecondsUntilNextTimerTrigger);

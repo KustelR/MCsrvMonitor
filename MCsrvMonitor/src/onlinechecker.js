@@ -23,7 +23,7 @@ async function writeOnline(online, ip) {
 }
 
 
-module.exports = { OnlineCheck: async function WriteDownOnline(ip, port=undefined) {
+module.exports = { LogOnline: async function WriteDownOnline(ip, port=undefined) {
     now = new Date()
     if (startDate != now.getDate()) {
         startDate = now.getDate();
