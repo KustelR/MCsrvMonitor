@@ -30,7 +30,6 @@
   <ItemGroup>
     <Content Include="config.json" />
     <Content Include="config_template.json" />
-    <Content Include="package-lock.json" />
     <Content Include="package.json" />
     <Content Include="README.md" />
     <Content Include="src\index.js" />

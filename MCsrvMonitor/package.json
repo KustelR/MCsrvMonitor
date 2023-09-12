@@ -1,7 +1,7 @@
 {
-  "name": "factioncs-check-script",
+  "name": "online-check-script",
   "version": "1.1.2",
-  "description": "FactioncsCheckScript",
+  "description": "Checks online on given server",
   "main": "index.js",
   "author": {
     "name": ""
