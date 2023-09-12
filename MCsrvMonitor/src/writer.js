@@ -4,19 +4,15 @@ STANDARD_PATH = './reports/';
 
 
 async function writeSmth(path, text) {
-    fs.writeFile(path, text, (err, data) => {
+    fs.writeFile(path, text, (err) => {
         if (err) throw err;
     })
 }
-
-
 function createDirectory(path) {
     fs.mkdirSync(path, (err) => {
         if (err) throw err;
     })
 }
-
-
 function isDirExists(path) {
     return fs.existsSync(path, (err) => {
         if (err) throw err;
