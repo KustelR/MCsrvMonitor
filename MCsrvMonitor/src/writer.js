@@ -8,8 +8,10 @@ async function writeSmth(path, text) {
         if (err) throw err;
     })
 }
-function createDirectory(path) {
-    fs.mkdirSync(path, (err) => {
+
+
+async function createDirectory(path) {
+    await fs.mkdirSync(path, (err) => {
         if (err) throw err;
     })
 }
