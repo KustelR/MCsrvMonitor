@@ -1,4 +1,5 @@
-# FactioncsCheckScript
+# How to use
 
 
-Rename config_template.json into config.json when you ready and run src/index.js
+Rename config_template.json into config.json, input your server data into config.json
+When you ready run src/index.js
