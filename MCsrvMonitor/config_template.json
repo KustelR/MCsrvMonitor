@@ -1,0 +1,6 @@
+{
+  "ip": "www.server.com",
+  "port": 25565, 
+  "delay": 300000, 
+  "directory": "standard" 
+}

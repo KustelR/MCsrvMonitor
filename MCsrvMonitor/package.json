@@ -1,14 +1,13 @@
 {
-  "name": "mcsrv-monitor",
-  "version": "0.0.0",
-  "description": "MCsrvMonitor",
-  "main": "app.js",
+  "name": "factioncs-check-script",
+  "version": "1.1.2",
+  "description": "FactioncsCheckScript",
+  "main": "index.js",
   "author": {
     "name": ""
   },
   "devDependencies": {
     "eslint": "^8.21.0"
   },
-  "eslintConfig": {
-  }
+  "eslintConfig": {}
 }
