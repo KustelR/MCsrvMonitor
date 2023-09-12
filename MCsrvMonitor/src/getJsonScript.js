@@ -1,10 +1,11 @@
 getData = require('./mcapirequester');
+config = require('./config.json');
 
 async function test(ip) {
     await getData(ip).then(data => { console.log(data) });
 }
 
-test('mc.factionscraft.ru');
+test(config.ip);
 
 require('readline')
     .createInterface(process.stdin, process.stdout)
