@@ -31,6 +31,8 @@
     <Content Include=".eslintrc.json" />
     <Content Include="config.json" />
     <Content Include="config_template.json" />
+    <Content Include="Dockerfile" />
+    <Content Include="dockerignore" />
     <Content Include="package-lock.json" />
     <Content Include="package.json" />
     <Content Include="README.md" />

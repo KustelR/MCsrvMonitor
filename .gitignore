@@ -399,4 +399,5 @@ FodyWeavers.xsd
 
 reports/
 config.json
-.docker
+Dockerfile
+dockerignore
