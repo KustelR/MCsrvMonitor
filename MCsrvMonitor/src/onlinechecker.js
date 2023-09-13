@@ -32,6 +32,7 @@ module.exports = { LogOnline: async function WriteDownOnline(ip, port=undefined)
 
     let online;
     try {
+        console.log(`Getting online for ${ip}`);
         await getOnline(ip, port).then(data => { online = data });
         await writeOnline(online, ip);
     }
