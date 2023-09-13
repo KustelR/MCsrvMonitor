@@ -1,4 +1,4 @@
 getData = require('./src/mcapirequester')
 
 
-console.log(getData('mc.hypixel.net'))
+getData('mc.hypixel.net').then(data => {console.log(data) })
