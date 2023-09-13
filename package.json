@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "node-fetch": "^2.6.1",
+    "package-lock.json": "^1.0.0"
+  }
+}
