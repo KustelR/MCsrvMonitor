@@ -1,8 +1,7 @@
 const onlinechecker = require('./onlinechecker');
 const config = require('../config.json');
 
-ips = config.ips;
-port = config.port;
+server_data = config.servers;
 delay = config.delay;
 
 
@@ -21,6 +20,7 @@ async function DoCheck(ip, port) {
 }
 
 
-for (let i = 0; i < ips.length; i++) {
-    DoCheck(ips[i], port);
+for (let i = 0; i < server_data.length; i++) {
+    srvData = server_data[i];
+    DoCheck(srvData.ip, srvData.port);
 }
