@@ -6,6 +6,7 @@ delay = config.delay;
 
 
 async function DoCheck(ip, port) {
+    onlinechecker.LogOnline(ip, port);
     setInterval(async function () { onlinechecker.LogOnline(ip, port); }, delay);
 }
 
