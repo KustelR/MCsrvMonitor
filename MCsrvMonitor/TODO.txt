@@ -7,3 +7,4 @@ DEPENDENCY INJECTION
 Testing?
 Use path module instead of strings
 Different ports for different ips support
+db support
