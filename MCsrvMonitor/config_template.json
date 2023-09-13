@@ -1,6 +1,6 @@
 {
-  "ip": "www.server.com",
-  "port": 25565, 
-  "delay": 300000, 
-  "directory": "standard" 
+  "ips": [ "put ip here", "and other here" ],
+  "port": 25565,
+  "delay": 300000,
+  "directory": "standard"
 }

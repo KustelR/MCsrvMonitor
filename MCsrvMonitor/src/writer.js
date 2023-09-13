@@ -48,6 +48,7 @@ module.exports = {
         if (!isDirExists(server_folder_path) && ip != undefined) {
             createDirectory(server_folder_path);
         }
+        console.log(`Writing new report on ${ip} to ${report_path}`)
         await writeSmth(report_path, text);
     }
 }
