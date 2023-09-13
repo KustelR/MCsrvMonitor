@@ -6,7 +6,6 @@ port = config.port;
 delay = config.delay;
 
 
-console.log("Starting writing down online...\n\n")
 const d = new Date();
 const epoch = d.getTime();
 
