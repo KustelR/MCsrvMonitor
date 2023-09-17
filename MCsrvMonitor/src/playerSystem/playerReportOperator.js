@@ -64,6 +64,7 @@ module.exports = {
                 console.log(`Unique player detected, id ${last_id}`)
                 fs.writeFileSync(lastIdPath, last_id.toString());
             }
+            player_data.update_activity_data();
             writePlayerReport(player_data, `${server_folder_path}${name}`)
         }
         console.log(`Writing player reports to ${server_folder_path}`)
