@@ -25,7 +25,8 @@ class Player {
 
     updateActivityData() {
         let now = Date.now();
-        this.activity_time.push(now);
+        if (this.activity_time == null) this.activity_time = [now]
+        else this.activity_time.push(now);
         this.last_activity_check_date = now;
 
         this.last_login = now;
