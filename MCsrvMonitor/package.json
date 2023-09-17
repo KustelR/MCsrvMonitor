@@ -11,6 +11,7 @@
   },
   "eslintConfig": {},
   "dependencies": {
+    "mocha": "^10.2.0",
     "package-lock": "^1.0.5",
     "package-lock-only": "^0.0.4"
   },
