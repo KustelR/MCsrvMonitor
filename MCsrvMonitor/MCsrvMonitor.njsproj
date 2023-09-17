@@ -44,6 +44,9 @@
     <Content Include="src\onlinechecker.js">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="src\playerSystem\player.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="src\writer.js" />
     <Content Include="test.js">
       <SubType>Code</SubType>
@@ -52,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="src\" />
+    <Folder Include="src\playerSystem\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
 </Project>
