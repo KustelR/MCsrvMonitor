@@ -34,7 +34,8 @@ function loadPlayerData(server_ip, player_name) {
 
     const player_file_path = `${report_folder_path}${player_name}.json`;
     if (fs.existsSync(player_file_path)) {
-        return JSON.parse(fs.readFileSync(player_file_path, 'utf8'));
+        playerDataJson = JSON.parse(fs.readFileSync(player_file_path, 'utf8'));
+        return PlayerBuilder.BuildFromJson(playerDataJson);
     }
     else return null;
 

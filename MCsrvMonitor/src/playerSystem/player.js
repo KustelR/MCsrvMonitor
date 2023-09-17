@@ -1,10 +1,12 @@
 class Player {
-    constructor(id, nickname) {
+    constructor(id, nickname, faction, activity_time, last_login, last_activity_check_date, login_count) {
         this.id = id;
         this.nickname = nickname;
-
-        this.updateActivityData();
-
+        this.faction = faction;
+        this.activity_time = activity_time;
+        this.last_login = last_login;
+        this.last_activity_check_date = last_activity_check_date;
+        this.login_count = login_count;
     }
 
     static get lastId() {
