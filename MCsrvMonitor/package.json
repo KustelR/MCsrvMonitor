@@ -7,11 +7,11 @@
     "name": ""
   },
   "devDependencies": {
-    "eslint": "^8.21.0"
+    "eslint": "^8.21.0",
+    "mocha": "^10.2.0"
   },
   "eslintConfig": {},
   "dependencies": {
-    "mocha": "^10.2.0",
     "package-lock": "^1.0.5",
     "package-lock-only": "^0.0.4"
   },
