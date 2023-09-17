@@ -11,7 +11,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>68d81f3a-69e7-461b-b349-ab7b0c3b4fcf</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>src\index.js</StartupFile>
+    <StartupFile>src\getJsonScript.js</StartupFile>
     <StartWebBrowser>False</StartWebBrowser>
     <SearchPath>
     </SearchPath>
