@@ -29,7 +29,7 @@ function createDirIfNotExists(path) {
 }
 
 
-function generatePath(path, ip) {
+function generateReportPath(path, ip) {
     const now = new Date();
     const dateName = `${now.getFullYear()}y${now.getMonth() + 1}m${now.getDate()}d`
 
@@ -51,7 +51,7 @@ module.exports = {
     async writeNewReport(online, ip = undefined, path = STANDARD_PATH) {
         const text = `${online} players\n${now}`;
 
-        paths = generatePath(path, ip);
+        paths = generateReportPath(path, ip);
         
         createDirIfNotExists(path)
         createDirIfNotExists(paths.server_folder_path)
