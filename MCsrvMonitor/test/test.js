@@ -1,11 +1,15 @@
-const { describe, it } = require('mocha');
+const { describe, it} = require('mocha');
 const assert = require('assert');
+const getData = require('../src/mcapirequester.js')
 
 
-describe('Array', function () {
-    describe('#indexOf()', function () {
-        it('should return -1 when the value is not present', function () {
-            assert.equal([1, 2, 3].indexOf(4), -1);
-        });
-    });
-});
+describe('Mcapi getData tests', function () {
+    describe('getData', function () {
+        it('MC api working', async function () {
+            let srv_data;
+            await getData('mc.hypixel.net').then(data => { srv_data = data });
+
+            assert.equal(srv_data.status, 'success');
+        })
+    })
+})

@@ -5,4 +5,6 @@ function Build(nickname) {
 }
 
 
-module.exports = Build
+module.exports = { 
+    "Build": Build
+}

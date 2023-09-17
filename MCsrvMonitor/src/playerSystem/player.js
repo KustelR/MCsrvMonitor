@@ -12,7 +12,7 @@ class Player {
     }
 
     updateActivityData() {
-        now = Date.now();
+        let now = Date.now();
         this.#activity_time.push(now);
         this.last_activity_check_date = now;
 
@@ -32,7 +32,7 @@ class Player {
 
     id;
     #nickname;
-    #activity_time;
+    #activity_time = [];
     #faction;
     #last_login;
     login_count = 0;
