@@ -1,7 +1,7 @@
-const { StorePlayerStatistics } = require('./playerSystem/playerReportOperator');
+const { StorePlayerStatistics } = require('./playerSystem/playerReportOperator.js');
 
-getData = require('./mcapirequester')
-writer = require('./writer');
+getData = require('./mcapirequester.js')
+writer = require('./writer.js');
 
 
 let max_online = 0;

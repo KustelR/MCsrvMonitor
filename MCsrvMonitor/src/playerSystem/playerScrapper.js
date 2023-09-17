@@ -1,5 +1,5 @@
-PlayerBuilder = require('./playerBuilder');
-player = require('./player');
+PlayerBuilder = require('./playerBuilder.js');
+player = require('./player.js');
 
 
 function scrapPlayerData(jsonServerData, server_ip)

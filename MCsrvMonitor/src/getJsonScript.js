@@ -1,4 +1,4 @@
-getData = require('./mcapirequester');
+getData = require('./mcapirequester.js');
 config = require('../config.json');
 
 

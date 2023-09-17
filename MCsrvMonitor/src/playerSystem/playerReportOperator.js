@@ -1,7 +1,7 @@
-const writer = require('../writer');
+const writer = require('../writer.js');
 const fs = require('fs');
-const PlayerBuilder = require('./playerBuilder');
-const { lastId } = require('./player');
+const PlayerBuilder = require('./playerBuilder.js');
+const { lastId } = require('./player.js');
 config = require('../../config.json');
 
 let app_folder_path = config.path;
