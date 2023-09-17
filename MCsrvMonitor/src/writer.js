@@ -1,6 +1,9 @@
 const fs = require('fs');
+const config = require('../config.json');
 
-STANDARD_PATH = './reports/';
+if (config.path) app_folder_path = config.path;
+else app_folder_path = './reports/';
+
 
 
 async function writeSmth(path, text) {
@@ -48,7 +51,7 @@ function generateReportPath(path, ip) {
 
 
 module.exports = {
-    async writeNewReport(online, ip = undefined, path = STANDARD_PATH) {
+    async writeNewReport(online, ip = undefined, path = app_folder_path) {
         const text = `${online} players\n${now}`;
 
         paths = generateReportPath(path, ip);
@@ -58,5 +61,9 @@ module.exports = {
 
         console.log(`Writing new report on ${ip} to ${paths.report_path}`)
         await writeSmth(paths.report_path, text);
-    }
+    },
+    "pathGen": function (ip) {
+        return generateReportPath(app_folder_path, ip)
+    },
+    "createDirIfNotExists": createDirIfNotExists
 }

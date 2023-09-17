@@ -1,3 +1,5 @@
+const { StorePlayerStatistics } = require('./playerSystem/playerReportOperator');
+
 getData = require('./mcapirequester')
 writer = require('./writer');
 
@@ -6,12 +8,11 @@ let max_online = 0;
 let startDate;
 
 
-async function getOnline(ip, port=undefined) {
+async function getData(ip, port=undefined) {
     let jsonData;
     await getData(ip, port).then(data => { jsonData = data });
-    const online = jsonData.players.now;
 
-    return online;
+    return jsonData;
 }
 
 
@@ -30,11 +31,15 @@ module.exports = { LogOnline: async function WriteDownOnline(ip, port=undefined)
         max_online = 0
     }
 
+    let jsonData;
     let online;
     try {
         console.log(`Getting online for ${ip}`);
-        await getOnline(ip, port).then(data => { online = data });
+        await getData(ip, port).then(data => { jsonData = data});
+        online = jsonData.players.now;
+ 
         await writeOnline(online, ip);
+        await StorePlayerStatistics(jsonData.players.sample, ip);
     }
     catch (err) {
         console.error(err)

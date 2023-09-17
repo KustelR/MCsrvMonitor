@@ -11,7 +11,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>68d81f3a-69e7-461b-b349-ab7b0c3b4fcf</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>test.js</StartupFile>
+    <StartupFile>src\index.js</StartupFile>
     <StartWebBrowser>False</StartWebBrowser>
     <SearchPath>
     </SearchPath>
@@ -48,6 +48,9 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="src\playerSystem\playerBuilder.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\playerSystem\playerReportOperator.js">
       <SubType>Code</SubType>
     </Content>
     <Content Include="src\playerSystem\playerScrapper.js">

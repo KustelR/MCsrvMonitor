@@ -2,12 +2,23 @@ PlayerBuilder = require('./playerBuilder');
 player = require('./player');
 
 
-module.exports = function scrapPlayerData(jsonServerData)
+function scrapPlayerData(jsonServerData, server_ip)
 {
-    players = [];
-    for (let i = 0; i < jsonServerData.players; i++) {
-        players.push(PlayerBuilder.Build(jsonServerData.players[i].name))
-    }
+    players = jsonServerData.players;
+    for (let i = 0; i < players.length; i++) {
 
-    return players;
+    }
+)
+    
+}
+
+
+async function writePlayerData(players) {
+    for (let i = 0; i < players.length; i++) {
+        await player.writePlayerData(players[i]);
+    }
+}
+
+module.exports = {
+    writePlayerData: writePlayerData
 }

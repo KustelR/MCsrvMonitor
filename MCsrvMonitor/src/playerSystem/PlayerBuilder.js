@@ -1,7 +1,7 @@
 Player = require('./player')
 
-function Build(nickname) {
-    return new Player(nickname)
+function Build(id, nickname) {
+    return new Player(id, nickname)
 }
 
 

@@ -3,7 +3,7 @@ config = require('../config.json');
 
 
 async function test(ip) {
-    await getData(ip).then(data => { console.log(data) });
+    await getData(ip).then(data => { console.log(data.players) });
 }
 
 
