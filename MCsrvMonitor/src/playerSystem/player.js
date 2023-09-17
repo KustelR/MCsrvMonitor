@@ -1,6 +1,7 @@
 class Player {
     constructor(nickname) {
         this.#nickname = nickname;
+        this.login_count++;
     }
 
     setFaction(faction) {
@@ -11,6 +12,7 @@ class Player {
         now = Date.now();
         this.#activity_time.push(now);
         this.#last_login = now;
+        this.last_activity_check_date = now;
     }
 
     getActivityTime() {
@@ -25,4 +27,6 @@ class Player {
     #activity_time;
     #faction;
     #last_login;
+    login_count = 0;
+    last_activity_check_date;
 }
