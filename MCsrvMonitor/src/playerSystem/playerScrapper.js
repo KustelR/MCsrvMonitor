@@ -6,7 +6,7 @@ module.exports = function scrapPlayerData(jsonServerData)
 {
     players = [];
     for (let i = 0; i < jsonServerData.players; i++) {
-        players.push(PlayerBuilder.Build())
+        players.push(PlayerBuilder.Build(jsonServerData.players[i].name))
     }
 
     return players;
