@@ -1,7 +1,10 @@
 class Player {
     constructor(nickname) {
         this.#nickname = nickname;
-        this.login_count++;
+        this.id = ++Player.lastId;
+
+        this.updateActivityData();
+
     }
 
     setFaction(faction) {
@@ -25,6 +28,9 @@ class Player {
         return `${this.#nickname} usually active on ${this.#activity_time}, plays in ${this.#faction}. Last login was ${this.#last_login}`;
     }
 
+    static lastId = 0;
+
+    id;
     #nickname;
     #activity_time;
     #faction;
@@ -32,3 +38,6 @@ class Player {
     login_count = 0;
     last_activity_check_date;
 }
+
+
+module.exports = Player;
