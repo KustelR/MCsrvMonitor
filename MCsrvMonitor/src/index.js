@@ -1,4 +1,4 @@
-const onlinechecker = require('./onlinechecker');
+const onlinechecker = require('./onlinechecker.js');
 const config = require('../config.json');
 
 server_data = config.servers;

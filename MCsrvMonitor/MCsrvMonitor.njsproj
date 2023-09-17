@@ -31,6 +31,8 @@
     <Content Include=".eslintrc.json" />
     <Content Include="config.json" />
     <Content Include="config_template.json" />
+    <Content Include="Dockerfile" />
+    <Content Include="dockerignore" />
     <Content Include="package-lock.json" />
     <Content Include="package.json" />
     <Content Include="README.md" />
@@ -42,14 +44,34 @@
     <Content Include="src\onlinechecker.js">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="src\playerSystem\player.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\playerSystem\playerBuilder.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\playerSystem\playerReportOperator.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\playerSystem\playerScrapper.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="src\writer.js" />
     <Content Include="test.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="test\player_test.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="test\test.js">
       <SubType>Code</SubType>
     </Content>
     <Content Include="TODO.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="test\" />
     <Folder Include="src\" />
+    <Folder Include="src\playerSystem\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
 </Project>
