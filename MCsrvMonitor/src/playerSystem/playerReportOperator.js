@@ -58,7 +58,7 @@ module.exports = {
             let player_data;
             player_data = loadPlayerData(server_ip, name);
             if (player_data === null) {
-                player_data = PlayerBuilder.Build(name);
+                player_data = PlayerBuilder.Build(last_id, name);
                 last_id++;
 
                 console.log(`Unique player detected, id ${last_id}`)
