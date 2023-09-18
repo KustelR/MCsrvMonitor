@@ -31,6 +31,7 @@ class Player {
 
         this.last_login = now;
         if (now - this.last_activity_check_date > 24 * 3600 * 1000) {
+            if (!this.login_count) { this.login_count = 1; }
             this.login_count++;
         }
     }

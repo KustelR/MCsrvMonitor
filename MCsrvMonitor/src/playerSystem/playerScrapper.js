@@ -8,7 +8,6 @@ function scrapPlayerData(jsonServerData, server_ip)
     for (let i = 0; i < players.length; i++) {
 
     }
-)
     
 }
 

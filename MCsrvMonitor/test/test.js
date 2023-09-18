@@ -6,8 +6,8 @@ const getData = require('../src/mcapirequester.js')
 describe('Mcapi getData tests', function () {
     describe('getData', function () {
         it('MC api working', async function () {
-            let srv_data;
-            await getData('mc.hypixel.net').then(data => { srv_data = data });
+
+            srv_data = await getData('mc.hypixel.net');
 
             assert.equal(srv_data.status, 'success');
         })

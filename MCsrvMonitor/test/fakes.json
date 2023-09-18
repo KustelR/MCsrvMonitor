@@ -1,0 +1,9 @@
+{
+  "fake_player": {
+    "id": "1337",
+    "nickname": "fake",
+    "activity_time": [ 100, 200, 300, 400, 500 ],
+    "last_login": 500,
+    "last_activity_check_date": 500
+  }
+}

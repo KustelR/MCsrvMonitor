@@ -60,6 +60,9 @@
     <Content Include="test.js">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="test\fakes.json">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="test\player_test.js">
       <SubType>Code</SubType>
     </Content>
