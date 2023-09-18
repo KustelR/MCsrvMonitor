@@ -23,7 +23,11 @@ describe('PlayerBuilder', () => {
             assert.equal(player.nickname, "fake");
             assert.equal(player.last_login, 500);
             assert.equal(player.last_activity_check_date, 500);
-            assert.equal(player.activity_time.length, [100, 200, 300, 400, 500].length)
+
+            test_activity_time = [100, 200, 300, 400, 500];
+            assert.ok(player.activity_time.length ==
+                test_activity_time.length & player.activity_time.every((val, index) =>
+                val === test_activity_time[index]))
         })
     })
 })
