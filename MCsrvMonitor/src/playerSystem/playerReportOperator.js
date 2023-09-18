@@ -1,7 +1,6 @@
 const writer = require('../writer.js');
 const fs = require('fs');
 const PlayerBuilder = require('./playerBuilder.js');
-const { lastId } = require('./player.js');
 config = require('../../config.json');
 
 let app_folder_path = config.path;
@@ -26,14 +25,8 @@ async function getLastId(server_folder_path) {
 }
 
 async function writePlayerReport(player, report_file_path) {
-    /*
-    report_folder_path = generatePath(server_ip)
-    const report_file_path = `${report_folder_path}+${player.name}.json`
-
-    writer.createDirIfNotExists(report_folder_path)
-    */
-        fs.writeFile(report_file_path + '.json', JSON.stringify(player), (err) => {
-        if (err) throw err;
+    fs.writeFile(report_file_path + '.json', JSON.stringify(player), (err) => {
+    if (err) throw err;
     })
 }
 
@@ -51,9 +44,9 @@ function loadPlayerData(server_ip, player_name) {
 
 function updatePlayerData(server_ip, player_name, last_id) {
     const name = player_name;
-    let player_data;
     let isUniquePlayer = false;
-    player_data = loadPlayerData(server_ip, name);
+
+    let player_data = loadPlayerData(server_ip, name);
     if (player_data === null) {
         player_data = PlayerBuilder.Build(last_id, name);
         isUniquePlayer = true;
