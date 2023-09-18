@@ -1,6 +1,6 @@
 {
   "name": "online-check-script",
-  "version": "1.1.2",
+  "version": "1.3.2",
   "description": "Checks online on given server",
   "main": "index.js",
   "author": {
