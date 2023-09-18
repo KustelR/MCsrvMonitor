@@ -44,7 +44,7 @@ function generateReportPath(path, ip) {
     }
     else {
         report_path = `${path}${ip.replaceAll('.', '')}/${dateName}.txt`
-        server_folder_path = `${path}/${ip.replaceAll('.', '')}`;
+        server_folder_path = `${path}${ip.replaceAll('.', '')}`;
     }
     return { report_path, server_folder_path }
 }
@@ -59,7 +59,7 @@ module.exports = {
         createDirIfNotExists(path)
         createDirIfNotExists(paths.server_folder_path)
 
-        console.log(`Writing new report on ${ip} to ${paths.report_path}`)
+        console.log(`Writing new report on ${ip} to ${paths.server_folder_path}`)
         await writeSmth(paths.report_path, text);
     },
     "pathGen": function (ip) {

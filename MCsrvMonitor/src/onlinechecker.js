@@ -7,14 +7,6 @@ let max_online = 0;
 let startDate;
 
 
-async function getData(ip, port=undefined) {
-    let jsonData;
-    await getData(ip, port).then(data => { jsonData = data });
-
-    return jsonData;
-}
-
-
 async function writeOnline(online, ip) {
     if (max_online < online) {
         max_online = online;
@@ -30,11 +22,10 @@ module.exports = { LogOnline: async function WriteDownOnline(ip, port=undefined)
         max_online = 0
     }
 
-    let jsonData;
     let online;
     try {
         console.log(`Getting online for ${ip}`);
-        await getData(ip, port).then(data => { jsonData = data});
+        const jsonData = await getData(ip, port);
         online = jsonData.players.now;
  
         writeOnline(online, ip);
