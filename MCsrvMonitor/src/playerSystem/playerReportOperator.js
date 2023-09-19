@@ -52,7 +52,11 @@ function updatePlayerData(server_ip, player_name, last_id) {
         isUniquePlayer = true;
 
         console.log(`Unique player detected, id ${last_id}`)
-        fs.writeFileSync(lastIdPath, last_id.toString());
+        if (isUniquePlayer) {
+            last_id++;
+            fs.writeFileSync(lastIdPath, last_id.toString());
+        }
+        
     }
     player_data.updateActivityData();
 
@@ -71,9 +75,9 @@ async function StorePlayerStatistics(raw_players, server_ip) {
         let last_id = await getLastId(server_folder_path);
 
         current_players_names = raw_players.map((x) => x.name);
-        for (let i = 0; i < current_players_names.length; i++) {
-            if (updatePlayerData(server_ip, current_players_names[i], last_id)) last_id++
-        }
+    for (let i = 0; i < current_players_names.length; i++) {
+        updatePlayerData(server_ip, current_players_names[i], last_id)
+    }
         
     }
 
