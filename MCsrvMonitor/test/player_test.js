@@ -34,7 +34,7 @@ describe('Player reports', () => {
         it('Should have all properties from fake json', () => {
             const player = PlayerBuilder.BuildFromJson(fakes.fake_player);
             const test_player_path = './test_player_report.json';
-            fs.writeFile(test_player_path, JSON.stringify(player), (err) => {
+            fs.writeFileSync(test_player_path, JSON.stringify(player), (err) => {
                 if (err) throw err;
             })
 
@@ -46,6 +46,9 @@ describe('Player reports', () => {
             assert.ok(new_player.activity_time.length ==
                 test_activity_time.length & new_player.activity_time.every((val, index) =>
                     val === test_activity_time[index]))
+
+            new_player.updateActivityData();
+            assert.ok(!(new_player.activity_time.length == test_activity_time.length))
 
             fs.unlink(test_player_path, (err) => {
                 if (err) throw err;
