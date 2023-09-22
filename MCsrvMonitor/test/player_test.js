@@ -9,20 +9,18 @@ describe('PlayerBuilder', () => {
     describe('Builds correctly', () => {
         it('Player should have all neccessary data', () => {
             let name = "oleg"
-            const player = PlayerBuilder.Build(0, 'oleg');
+            const player = PlayerBuilder.Build('oleg');
 
-            assert.equal(player.id, 0);
             assert.equal(player.nickname, 'oleg');
+            assert.equal(player.activity_time.length, 0);
+            assert.equal(player.faction, null);
         })
     })
     describe('Builds from Json correctly', () => {
         it('Should have all properties from fake json', () => {
             const player = PlayerBuilder.BuildFromJson(fakes.fake_player);
 
-            assert.equal(player.id, 1337);
             assert.equal(player.nickname, "fake");
-            assert.equal(player.last_login, 500);
-            assert.equal(player.last_activity_check_date, 500);
 
             test_activity_time = [100, 200, 300, 400, 500];
             assert.ok(player.activity_time.length ==
