@@ -69,9 +69,8 @@ async function StorePlayerStatistics(raw_players, server_ip) {
         current_players_names = raw_players.map((x) => x.name);
     for (let i = 0; i < current_players_names.length; i++) {
         updatePlayerData(server_ip, current_players_names[i])
-    }
-        
-    }
+    }  
+}
 
 
 module.exports = StorePlayerStatistics;
